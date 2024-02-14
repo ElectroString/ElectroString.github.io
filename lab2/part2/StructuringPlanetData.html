@@ -28,16 +28,16 @@ A table organization project to organize planitary information
         <thead>
           <tr>
             <td colspan="2"> </td>
-            <th>Name</th>
-            <th>Mass (10<sup>24</sup>kg)</th>
-            <th>Diameter (km)</th>
-            <th>Density (kg/m<sup>3</sup>)</th>
-            <th>Gravity (m/s<sup>2</sup>)</th>
-            <th>Length of day (hours)</th>
-            <th>Distance from Sun (10<sup>6</sup>km)</th>
-            <th>Mean temperature (°C)</th>
-            <th>Number of moons</th>
-            <th>Notes</th>
+            <th scope="col">Name</th>
+            <th scope="col">Mass (10<sup>24</sup>kg)</th>
+            <th scope="col">Diameter (km)</th>
+            <th scope="col">Density (kg/m<sup>3</sup>)</th>
+            <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+            <th scope="col">Length of day (hours)</th>
+            <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+            <th scope="col">Mean temperature (°C)</th>
+            <th scope="col">Number of moons</th>
+            <th scope="col">Notes</th>
           </tr>
         </thead>
 
@@ -45,8 +45,8 @@ A table organization project to organize planitary information
             
             <!--Mercury-->
             <tr>
-                <th colspan="2" rowspan="4">Terrestrial planets</th>
-                <th>Mercury</th>
+                <th colspan="2" rowspan="4" id="Terrestrial-planet">Terrestrial planets</th>
+                <th id="Mercury" headers="Terrestrial-planet">Mercury</th>
                 <td>0.330</td>
                 <td>4,879</td>
                 <td>5427</td>
@@ -60,7 +60,7 @@ A table organization project to organize planitary information
 
             <!--Venus-->
             <tr>
-                <th>Venus</th>
+                <th id="Venus" headers="Terrestrial-planet">Venus</th>
                 <td>4.87</td>
                 <td>12,104</td>
                 <td>5243</td>
@@ -74,7 +74,7 @@ A table organization project to organize planitary information
 
             <!--Earth-->
             <tr>
-                <th>Earth</th>
+                <th id="Earth" headers="Terrestrial-planet">Earth</th>
                 <td>5.97</td>
                 <td>12,756</td>
                 <td>5514</td>
@@ -88,7 +88,7 @@ A table organization project to organize planitary information
 
             <!--Mars-->
             <tr>
-                <th>Mars</th>
+                <th id="Mars" headers="Terrestrial-planet">Mars</th>
                 <td>0.642</td>
                 <td>6,792</td>
                 <td>3933</td>
@@ -106,9 +106,9 @@ A table organization project to organize planitary information
                 Jupitar         
             -->
             <tr>
-                <th rowspan="4">Jovian Planets</th>
-                <th rowspan="2">Gas giants</th>
-                <th>Jupitar</th>
+                <th rowspan="4" id="Jovian-planets">Jovian planets</th>
+                <th rowspan="2" id="Gas-giants" headers="Jovian-planets">Gas giants</th>
+                <th id="Jupitar" headers="Gas-giants Jovian-planets">Jupitar</th>
                 <td>1898</td>
                 <td>142,984</td>
                 <td>1326</td>
@@ -122,7 +122,7 @@ A table organization project to organize planitary information
 
             <!--Saturn-->
             <tr>
-                <th>Saturn</th>
+                <th id="Saturn" headers="Gas-giants Jovian-planets">Saturn</th>
                 <td>568</td>
                 <td>120,536</td>
                 <td>687</td>
@@ -139,8 +139,8 @@ A table organization project to organize planitary information
                 Uranus        
             -->
             <tr>
-                <th rowspan="2">Ice giants</th>
-                <th>Uranus</th>
+                <th rowspan="2" id="Ice-giants" headers="Jovian-planets">Ice giants</th>
+                <th id="Uranus" headers="Ice-giants Jovian-planets">Uranus</th>
                 <td>86.8</td>
                 <td>51,118</td>
                 <td>1271</td>
@@ -154,7 +154,7 @@ A table organization project to organize planitary information
 
             <!--Neptune-->
             <tr>
-                <th>Neptune</th>
+                <th id="Neptune" headers="Ice-giants Jovian-planets">Neptune</th>
                 <td>102</td>
                 <td>49,528</td>
                 <td>1638</td>
@@ -172,8 +172,8 @@ A table organization project to organize planitary information
                         
             -->
             <tr>
-                <th colspan="2">Dwarf planets</th>
-                <th>Pluto</th>
+                <th colspan="2" id="Dwarf-planets">Dwarf planets</th>
+                <th id="Pluto" headers="Dwarf-planets">Pluto</th>
                 <td>0.0146</td>
                 <td>2,370</td>
                 <td>2095</td>
