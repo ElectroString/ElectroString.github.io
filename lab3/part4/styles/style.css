@@ -29,6 +29,9 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
   }
   
   nav {
@@ -56,6 +59,9 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
   }
 
   .feature {
@@ -63,8 +69,6 @@ body {
       float: left;
       margin: 0 20px 20px 0;
   }
-  main{
-    display: flex;
-  }
+
 
 
