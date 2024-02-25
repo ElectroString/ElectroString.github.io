@@ -60,6 +60,11 @@ body {
 
   .feature {
       width: 200px;
+      float: left;
+      margin: 0 20px 20px 0;
+  }
+  main{
+    display: flex;
   }
 
 
