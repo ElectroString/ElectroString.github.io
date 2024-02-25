@@ -1,0 +1,19 @@
+/*
+<!--
+	Name: Cam Davies
+	File: style.css
+	Date: 25 february 2024
+	CSS For making a cool looking box
+	-->
+*/
+
+html {
+    font-family: sans-serif;
+  }
+  
+  /* Your CSS below here */
+
+  div{
+    width: 200px;
+    height: auto;
+  }
