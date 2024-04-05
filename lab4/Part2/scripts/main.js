@@ -10,11 +10,11 @@ const overlay = document.querySelector('.overlay');
 const imgNames = ["pic1.jpg","pic2.jpg","pic3.jpg","pic4.jpg","pic5.jpg"];
 /* Declaring the alternative text for each image file */
 const altText = {
-    "pic1.jpg":"Alternate text for pic 1",
-    "pic2.jpg":"Alternate text for pic 2",
-    "pic3.jpg":"Alternate text for pic 3",
-    "pic4.jpg":"Alternate text for pic 4",
-    "pic5.jpg":"Alternate text for pic 5"
+    "pic1.jpg":"Close up picture of an eye",
+    "pic2.jpg":"A seashell? I think... maybe a rock?",
+    "pic3.jpg":"a group of natural purple and white Flowers",
+    "pic4.jpg":"Hyroglyphs depicting people with the Ankh symbol, and Anubis",
+    "pic5.jpg":"A moth or buterfly on a leaf"
 };
 /* Looping through images */
 
