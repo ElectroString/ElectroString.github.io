@@ -6,6 +6,8 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+var counter = document.querySelector("p");
+var ballCount = 0;
 // function to generate random number
 
 function random(min, max) {
@@ -109,9 +111,10 @@ class Ball extends Shape {
       draw() {
         ctx.beginPath();
         ctx.strokeStyle = this.color;
+        ctx.lineWidth = 3;
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx.stroke();
-        ctx.lineWidth = 3;
+        
       }
 
       checkBounds(){
@@ -142,6 +145,8 @@ class Ball extends Shape {
         
               if (distance < this.size + ball.size) {
                 ball.exists = false
+                ballCount--;
+                counter.textContent = 'Ball Count: ' + ballCount;
               }
             }
           }
@@ -164,14 +169,15 @@ while (balls.length < 25) {
     randomRGB(),
     size,
   );
-
+  ballCount++;
+  counter.textContent = 'Ball Count: ' + ballCount;
   balls.push(ball);
  
 }
 
-  const evilCrcle = EvilCircle(
-    random(0+size,width - size),
-    random(0+size,width - size)
+  const evilCrcle = new EvilCircle(
+    random(0,width),
+    random(0,width)
   );
 
 function loop() {
@@ -179,15 +185,16 @@ function loop() {
     ctx.fillRect(0, 0, width, height);
   
     for (const ball of balls) {
-      if( ball.exists){
+      if(ball.exists){
         ball.draw();
         ball.update();  
         ball.collisionDetect();
       }
     }
-    evilCrcle.draw()
-    evilCrcle.checkBounds()
-    evilCrcle.collisionDetect()
+    evilCrcle.draw();
+    evilCrcle.checkBounds();
+    evilCrcle.collisionDetect();
+    
     requestAnimationFrame(loop);
   }
   loop();
