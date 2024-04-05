@@ -18,7 +18,7 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-
+// ball class which defines the balls flying aroundd the screen
 class Ball {
     constructor(x, y, velX, velY, color, size) {
       this.x = x;
@@ -29,13 +29,15 @@ class Ball {
       this.size = size;
     }
 
+    // draws the ball on the screen
     draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         ctx.fill();
       }
-      
+
+    // updates the balls position and velocity; checks if ball hit a wall  
     update() {
         if ((this.x + this.size) >= width) {
           this.velX = -(this.velX);
@@ -56,7 +58,8 @@ class Ball {
         this.x += this.velX;
         this.y += this.velY;
       }
-
+      
+      // checks if the ball has collided with another ball
       collisionDetect() {
         for (const ball of balls) {
           if (this !== ball) {
@@ -72,9 +75,10 @@ class Ball {
       }
   }
 
+// constans of balls
+const balls = [];
 
-  const balls = [];
-
+// creates the ball instances
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
@@ -92,6 +96,8 @@ while (balls.length < 25) {
 
   
 }
+
+// loops to keep the screen updating
 function loop() {
     ctx.fillStyle = "rgb(0 0 0 / 25%)";
     ctx.fillRect(0, 0, width, height);
