@@ -1,8 +1,4 @@
 
-
-
-
-
 // setup canvas
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -36,8 +32,9 @@ class Shape {
   }
 
 }
+"hello".start
 
-//ball class which defines the balls flying aroundd the screen
+// ball class which defines the balls flying aroundd the screen
 class Ball extends Shape {
 
     constructor(x, y, velX, velY, color, size) {
@@ -47,7 +44,7 @@ class Ball extends Shape {
       this.exists = true;
     }
 
-    //draws the ball on the screen
+    // draws the ball on the screen
     draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
@@ -92,7 +89,7 @@ class Ball extends Shape {
         }
       }
   }
-
+parse
   // evil circle class to create the playerr controlled evil circle
   class EvilCircle extends Shape{
       constructor(x,y){
