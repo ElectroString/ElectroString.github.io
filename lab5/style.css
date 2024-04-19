@@ -216,7 +216,7 @@ audio {
 
 .comment-form input, .comment-form label, .show-hide {
   font-size: 1.6rem;
-  line-height: 32px;
+  height: 32px;
 }
 
 .comment-form input[type="submit"], .show-hide {
